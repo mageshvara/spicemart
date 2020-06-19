@@ -1,0 +1,389 @@
+<!--
+  This was created based on the Dribble shot by Deepak Yadav that you can find at https://goo.gl/XRALsw
+  I'm @hk95 on GitHub. Feel free to message me anytime.
+-->
+
+<style>
+    * {
+	 box-sizing: border-box;
+}
+ body {
+	 background: url('https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60') no-repeat ;
+	 background-size: 100%;
+	 color: #fff;
+	 font-family: Helvetica;
+}
+ h2 {
+	 font-size: 2rem;
+	 font-weight: normal;
+}
+ .based {
+	 margin: 1rem;
+}
+ .based a {
+	 color: #fff;
+	 font-weight: bold;
+}
+ .form {
+	 max-width: 860px;
+	 margin: 6rem auto 0 auto;
+	 display: flex;
+	 flex-direction: row;
+	 padding: 4rem;
+	 background: rgba(0, 0, 0, .6);
+	 border-radius: 0.2rem;
+	 position: relative;
+}
+ .form_content {
+	 margin-bottom: 1rem;
+}
+ .form-group {
+	 color: #333;
+	 opacity: 0;
+}
+ .form-group_title {
+	 color: #e57b5c;
+	 text-transform: uppercase;
+}
+ .form-group_input {
+	 width: 100%;
+	 border-width: 0 0 2px 0;
+	 border-bottom: 2px solid #ccc;
+	 padding: 0.5rem;
+	 margin-bottom: 1.5rem;
+}
+ .form_background {
+	 border-radius: 0.2rem;
+	 background-color: #fff;
+	 padding: 3rem 2rem;
+	 box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .4);
+	 width: 50%;
+	 height: 120%;
+	 margin: 0;
+	 position: absolute;
+	 top: 50%;
+	 left: 0;
+	 right: 0;
+	 transition: all 1.1s cubic-bezier(0.04, 0.57, 0.15, 1.46);
+}
+ .fieldset {
+	 flex: 1;
+	 margin: 0;
+	 border: 0;
+	 padding: 0 5rem 0 0;
+}
+ .fieldset:first-child {
+	 padding-left: 0;
+}
+ .fieldset:last-child {
+	 padding-left: 5rem;
+	 padding-right: 0;
+}
+ .radio--invisible {
+	 opacity: 0;
+	 height: 0;
+	 width: 0;
+}
+ .button {
+	 text-transform: uppercase;
+	 padding: 0.6rem 3rem;
+	 border: 1px solid #fff;
+	 border-radius: 0.3rem;
+	 cursor: pointer;
+	 transition: background 0.2s ease-in;
+	 display: inline-block;
+	 margin-top: 1rem;
+}
+ .button:hover {
+	 background-color: rgba(0, 0, 0, .3);
+}
+ .button--form {
+	 background: #e57b5c;
+	 color: #fff;
+	 float: right;
+	 margin-top: 0;
+}
+ .button--form:hover {
+	 background: #ec9f88;
+}
+ #noaccount:checked ~ .form_background {
+	 transform: translate(3rem, -50%);
+}
+ #noaccount:checked ~ .form_background .form-group--account {
+	 display: none;
+}
+ #noaccount:checked ~ .form_background .form-group--noaccount {
+	 display: block;
+	 opacity: 0;
+	 animation-delay: 0.2s;
+	 animation-duration: 0.3s;
+	 animation-name: slidein;
+	 animation-fill-mode: forwards;
+}
+ #account:checked ~ .form_background {
+	 transform: translate(calc(100% - 3rem), -50%);
+}
+ #account:checked ~ .form_background .form-group--noaccount {
+	 display: none;
+}
+ #account:checked ~ .form_background .form-group--account {
+	 display: block;
+	 animation-delay: 0.2s;
+	 animation-duration: 0.3s;
+	 animation-name: slidein;
+	 animation-fill-mode: forwards;
+}
+ @keyframes slidein {
+	 from {
+		 opacity: 0;
+	}
+	 to {
+		 opacity: 1;
+	}
+}
+.form2{
+        display: none;
+    }
+@media (min-width : 1px)
+    and (max-width : 680px) {
+    .form{
+        display: none;
+    }
+    .form2{
+        display: inline;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Martel+Sans&display=swap");
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Martel Sans", sans-serif;
+}
+body {
+    background: url('https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500') no-repeat ;
+	 background-size: 100%;
+ 
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+}
+.card {
+ background-color: transparent;
+ width: 25%;
+ height: 400px;
+ border: 1px solid #f1f1f1;
+ perspective: 1000px;
+}
+.card .inner {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ transition: transform 0.8s;
+ transform-style: preserve-3d;
+ border-top: 2px solid #487eb0;
+ border-radius: 5px;
+ box-shadow: 6px 7px 54px -26px rgba(0, 0, 0, 0.31);
+}
+.card.rotate .inner {
+ transform: rotateY(180deg);
+}
+.card .signup, .card .login {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+ border-radius: 5px;
+ padding: 12px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.card .signup h3, .card .login h3 {
+ margin-bottom: 2rem;
+ font-size: 20px;
+}
+.card .signup form .form-control, .card .login form .form-control {
+ margin-bottom: 1rem;
+ position: relative;
+ width: 100%;
+}
+.card .signup form .form-control input, .card .login form .form-control input {
+ display: block;
+ border: none;
+ border-bottom: 2px solid #000;
+ outline: none;
+ font-size: 14px;
+ margin-bottom: 32px;
+ width: 100%;
+}
+.card .signup form .form-control input:focus, .card .login form .form-control input:focus, .card .signup form .form-control input:valid, .card .login form .form-control input:valid {
+ border-bottom: 2px solid #487eb0;
+}
+.card .signup form .form-control input:focus + label, .card .login form .form-control input:focus + label, .card .signup form .form-control input:valid + label, .card .login form .form-control input:valid + label {
+ transform: translateY(-25px);
+ color: #487eb0;
+}
+.card .signup form .form-control label, .card .login form .form-control label {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: 0.3s;
+ font-size: 14px;
+}
+.card .signup form button, .card .login form button {
+ border: none;
+ background-color: #487eb0;
+ color: #fff;
+ padding: 6px 30px;
+ border-radius: 3px;
+ font-size: 16px;
+ cursor: pointer;
+ text-transform: uppercase;
+}
+.card .signup form a, .card .login form a {
+ display: block;
+ font-size: 16px;
+ margin-top: 2rem;
+ cursor: pointer;
+ color: #487eb0;
+}
+.card .signup form a:hover, .card .login form a:hover {
+ text-decoration: underline;
+}
+.card .login {
+ background-color: #fff;
+}
+.card .signup {
+ background-color: #fff;
+ transform: rotateY(180deg);
+}
+@media screen and (max-width: 1200px) {
+ .card {
+     width: 35%;
+}
+}
+@media screen and (max-width: 820px) {
+ .card {
+     width: 50%;
+}
+}
+@media screen and (max-width: 600px) {
+ .card {
+     width: 60%;
+}
+}
+@media screen and (max-width: 450px) {
+ .card {
+     width: 70%;
+}
+}
+@media screen and (max-width: 320px) {
+ .card {
+     width: 80%;
+}
+}
+}
+
+</style>
+<div class="card form2">
+    <div class="inner" style="    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+    color: white;
+    border: 1px solid olive;">
+      <div class="login" style="background-color: transparent;">
+        <form style="background-color: transparent;">
+          <h3>Login</h3>
+          <div class="form-control">
+            <input type="text" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-control">
+            <input type="password" id="password" required />
+            <label for="password">Password</label>
+          </div>
+          <button>Login</button>
+
+          <a id="signup">Don't have an account</a>
+        </form>
+      </div>
+      <div class="signup" style="    background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 1); /* Black w/opacity/see-through */
+      color: white;
+      border: 1px solid olive;">
+        <h3>Create an account</h3>
+        <form>
+          <div class="form-control">
+            <input type="text" name="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-control">
+            <input type="password" name="password_" required />
+            <label for="password_">Password</label>
+          </div>
+          <div class="form-control">
+            <input type="password" name="confirm_pass" required />
+            <label for="confirm_pass">Confirm Password</label>
+          </div>
+          <button>Signup</button>
+          <a id="login">Already have an account</a>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+
+<form action="" class="form" >
+
+    <input id="noaccount" name="radioaccount" type="radio" class="radio radio--invisible" checked />
+    <input id="account" name="radioaccount" type="radio" class="radio radio--invisible"/>
+    <div class="form_background">
+      <div class="form-group form-group--account">
+        <h3 class="form-group_title">Log in</h3>
+        <input class="form-group_input" type="email" placeholder="Email"/>
+        <input class="form-group_input" type="password" placeholder="Password"/>
+        <button class="button button--form">Log in</button>
+      </div>
+      <div class="form-group form-group--noaccount">
+        <h3 class="form-group_title">Sign up</h3>
+        <input class="form-group_input" type="text" placeholder="Full Name"/>
+        <input class="form-group_input" type="email" placeholder="Email"/>
+        <input class="form-group_input" type="password" placeholder="Password"/>
+        <button class="button button--form">Sign up</button>
+      </div>
+    </div>
+
+  <fieldset class="fieldset">
+    <h2>Don't have an account ?</h2>
+    <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+    <div class="form_content form_content--noaccount">
+      
+    </div>
+    <label for="noaccount" class="button">Signup</label>
+  </fieldset>
+  <fieldset class="fieldset">
+    <h2>Have an account ?</h2>
+    <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+    
+    <div class="form_content form_content--noaccount">
+      
+    </div>
+    <label for="account" class="button">login</label>
+  </fieldset>
+</form>
+
+<script>
+    const card = document.querySelector(".card");
+
+document.querySelector("#login").addEventListener("click", () => {
+card.classList.remove("rotate");
+});
+document.querySelector("#signup").addEventListener("click", () => {
+card.classList.add("rotate");
+});
+
+</script>

@@ -1,0 +1,108 @@
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="style2.scss">
+<style>
+    .row{
+        padding: 20px;;
+    }
+</style>
+<div class="col-md-6 offset-md-3">
+    <span class="anchor" id="formContact"></span>
+    <hr class="my-5">
+
+    <!-- form user info -->
+    <div class="card card-outline-secondary">
+        <div class="card-header">
+            <h3 class="mb-0">INSERT</h3>
+        </div>
+        <div class="card-body">
+            <form class="form" role="form" autocomplete="off" method="post" action="/insert">
+                <fieldset>
+                    <label for="name2" class="mb-0">Product-ID</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="idp" id="idp" class="form-control" required="">
+                        </div>
+                    </div>
+                    <label for="name2" class="mb-0">Name</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="name" id="name2" class="form-control" required="">
+                        </div>
+                    </div>
+                    <label for="name2" class="mb-0">Quantity</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="quantity" id="quantity" class="form-control" required="">
+                        </div>
+                    </div>
+                    <label for="name2" class="mb-0">Price</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="price" id="price" class="form-control" required="">
+                        </div>
+                    </div>
+                    <label for="name2" class="mb-0">Brand</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="brand" id="brand" class="form-control" required="">
+                        </div>
+                    </div>
+                    <label for="name2" class="mb-0">ImageURL</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="url" id="url" class="form-control" required="">
+                        </div>
+                    </div>
+                    <label for="name2" class="mb-0">Rating</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <input type="text" name="rating" id="rating" class="form-control" required="">
+                        </div>
+                    </div>
+                    
+                    <label for="message2" class="mb-0">Description</label>
+                    <div class="row mb-1">
+                        <div class="col-lg-12">
+                            <textarea rows="6" name="message" id="message" class="form-control" required=""></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg float-right">Insert</button>
+                </fieldset>
+            </form>
+        </div>
+        <button onclick="location.href='/admin'"type="submit" class="btn btn-danger btn-lg float-right">EXIT</button>
+    </div>
+    <!-- /form user info -->
+
+</div>
+
+<script>
+    // validation example for Login form
+$("#btnLogin").click(function(event) {
+    
+    var form = $("#loginForm");
+    
+    if (form[0].checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    
+    // if validation passed form
+    // would post to the server here
+    
+    form.addClass('was-validated');
+});
+</script>
